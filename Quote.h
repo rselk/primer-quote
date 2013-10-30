@@ -7,6 +7,7 @@
 //Quote.h
 //Base Class
 
+
 class Quote
 {
   public:
@@ -24,5 +25,7 @@ class Quote
   protected: 
     double price = 0.0;
 };
+
+double print_total (std::ostream&, const Quote&, size_t);
 
 #endif
