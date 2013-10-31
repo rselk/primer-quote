@@ -1,3 +1,6 @@
 *.o
 *.swp
-sesh
+*.cpp.swp
+*.h.swp
+*.makefile.swp
+*.vim
