@@ -10,6 +10,17 @@ class Bulk_quote : public Disc_quote
 {
   public:
     Bulk_quote() = default;
+
+
+    Bulk_quote(const Bulk_quote& b) : Disc_quote() {
+     std::cout<< "Bulk_quote copy constructor " <<std::endl; 
+    } 
+    Bulk_quote &operator=(const Bulk_quote &b)
+    {
+      std::cout<< "Bulk_quote assing= op " <<std::endl;
+      Disc_quote::operator=(b); 
+      return *this;
+    }
     Bulk_quote(const std::string &book, double price, std::size_t qty, double disc) : 
       Disc_quote(book, price, qty, disc) {} 
       

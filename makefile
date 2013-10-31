@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp Quote.cpp Bulk_quote.cpp Disc_quote.cpp -std=c++0x -Wall -o main.o
+	g++ main.cpp Quote.cpp Bulk_quote.cpp Disc_quote.cpp Basket.cpp -std=c++0x -Wall -o main.o

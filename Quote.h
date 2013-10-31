@@ -6,14 +6,13 @@
 
 //Base Class
 
-
 class Quote
 {
   public:
     Quote() = default;
-    Quote(const Quote&) = default;
+    Quote(const Quote&);
     Quote(Quote&&) = default;
-    Quote &operator=(const Quote&) = default;
+    Quote &operator=(const Quote&);
     Quote &operator=(Quote&&) = default; //move assign
     Quote (const std::string &book, double sales_price) :
       bookNo(book), price(sales_price) {}
@@ -21,6 +20,7 @@ class Quote
     virtual double net_price (std::size_t n) const
     { return n* price; }
     virtual ~Quote() = default;
+
 
   private:
     std::string bookNo;
