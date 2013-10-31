@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 
-//Quote.h
 //Base Class
 
 
@@ -12,6 +11,10 @@ class Quote
 {
   public:
     Quote() = default;
+    Quote(const Quote&) = default;
+    Quote(Quote&&) = default;
+    Quote &operator=(const Quote&) = default;
+    Quote &operator=(Quote&&) = default; //move assign
     Quote (const std::string &book, double sales_price) :
       bookNo(book), price(sales_price) {}
     std::string isbn() const { return bookNo; }

@@ -4,20 +4,16 @@
 #include <iostream>
 #include <string>
 
-#include "Quote.h"
+#include "Disc_quote.h"
 
-class Bulk_quote : public Quote
+class Bulk_quote : public Disc_quote
 {
   public:
     Bulk_quote() = default;
-    Bulk_quote(const std::string &book, double p, std::size_t qty, double disc) : 
-      Quote(book, p), min_qty(qty), discount(disc) {}
+    Bulk_quote(const std::string &book, double price, std::size_t qty, double disc) : 
+      Disc_quote(book, price, qty, disc) {} 
       
     double net_price (std::size_t) const override;
-  
-  private:
-    std::size_t min_qty = 0;
-    double discount = 0.0;
 };
 
 #endif
